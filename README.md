@@ -100,3 +100,27 @@ This section has moved here: [https://tailwindcss.com/docs/guides/create-react-a
 -button-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
 -body-text: fontSize "16px", fontWeight: "regular" lineSpacing "1.2em", characterSpacing "0.05em"
 -menu-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
+
+### SVG Implementation
+
+1. Import desired SVG file into module via {ReactComponent as ComponentName} from 'assets/icons/{any folder inside assets}/file.svg' NOTE: component name can be whatever you want
+2. Use the imported SVG component in the desired location within the JSX file as <ComponentName className="any-class-name" /> NOTE: className can be whatever you want
+3. Style the SVG component using the className provided in the previous step, use stroke-current and fill-current to change color of SVG. NOTE: unless you declare stroke color and fill color the icon will be invisible
+
+Example:
+
+```jsx
+import { ReactComponent as CalenderIcon } from "assets/icons/time/calender-1.svg";
+
+const ExampleComponent = () => {
+  return (
+    <div>
+      <CalenderIcon className="w-8 h-8 stroke-current current-fill text-primary-300" />
+    </div>
+  );
+};
+```
+
+IMPORTANT: stroke-current and fill-current will correspond to the color you set as text-color, so make sure you sue text utility class to change color of SVG
+
+-Width/Height can also be modified using the w-{number} and h-{number} utility classes, but default viewbox will be maintained if not specified
