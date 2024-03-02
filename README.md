@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Custom TailwindCSS Configuration
+
+This section has moved here: [https://tailwindcss.com/docs/guides/create-react-app](https://tailwindcss.com/docs/guides/create-react-app)
+
+--- TailwindCSS Font Family ---
+-Roboto imported from Google Fonts(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap)
+
+--- TailwindCSS Custom Color Pallette ---
+-Primary:
+100: "#f0fff3", (Very Light Turquoise)
+200: "#b2d8d8", (Light Turquoise)
+300: "#66b2b2", (Turquoise)
+400: "#008080", (Darkened Turquoise)
+500: "#006666", (Dark Turquoise)
+600: "#004c4c", (Very Dark Turquoise)
+
+-Grayish: #666666 (Dark Gray)
+-Light: #f4f4f4 (Light Beige)
+
+### Custom Classes
+
+--- TailwindCSS Custom Headers ---
+-h1: fontSize "49px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h2: fontSize "39px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h3: fontSize "31.3px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h4: fontSize "25px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h5: fontSize "20px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h6: fontSize "16px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-button-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
+-body-text: fontSize "16px", fontWeight: "regular" lineSpacing "1.2em", characterSpacing "0.05em"
+-menu-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
