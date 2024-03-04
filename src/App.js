@@ -1,6 +1,7 @@
 
 import './App.css';
 import Button from './components/button/buttons.js';
+import InputField from './components/input_fields/input_fields.js';
 
 const Icon = () => (
   <svg
@@ -43,6 +44,34 @@ function App() {
             Button with Icon
           </Button>
       </div>
+
+      <InputField
+  label="Username"
+  type="text"
+  placeholder="Enter your username"
+  required
+  minLength={3}
+  successMessage="Username is available!"
+/>
+
+<InputField
+  label="Email"
+  type="email"
+  placeholder="Enter your email address"
+  required
+  pattern={/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/}
+  successMessage="Email format is valid!"
+/>
+
+<InputField
+  label="Custom Validation"
+  type="text"
+  placeholder="Starts with 'A'"
+  customValidation={value => value.startsWith('A')}
+  successMessage="Input is valid!"
+/>
+
+
   </>
   );
 }
