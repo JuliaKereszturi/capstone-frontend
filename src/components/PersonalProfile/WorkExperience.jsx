@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as EditSquare } from "../../assets/icons/files/Edit-Square.svg";
-
+import { ReactComponent as AddSvg } from "../../assets/icons/essential/add.svg";
 
 const WorkExperience = () => {
 
@@ -45,7 +45,7 @@ const WorkExperience = () => {
       <h2 className="text-2xl text-black font-semibold mb-4">
         Work Experience
       </h2>
-
+      {/* change keys to ids here */}
       {experiences.map((exp, index) => (
         <div key={exp.role} className="mb-6 flex justify-between">
           <div>
@@ -67,7 +67,10 @@ const WorkExperience = () => {
         </div>
       ))}
 
-      <button className="bg-primary-400 text-white font-roboto py-2 px-4 rounded hover:bg-primary-500">
+      <button className="flex items-center justify-center bg-white text-primary-400 border border-primary-400 font-roboto py-2 px-4 rounded hover:bg-primary-500 hover:border-primary-500 hover:text-white transition ease-in duration-200">
+        
+          <AddSvg />
+       
         Add Work Experience
       </button>
     </div>

@@ -21,6 +21,12 @@ module.exports = {
         },
         grayish: "#666666",
         light: "#f4f4f4",
+
+        primaryBlue: {
+          100: "#7ABFFF",
+          200: "#1456FC",
+          300: "#303DBF",
+        },
       },
     },
   },
