@@ -62,29 +62,37 @@ code {
   letter-spacing: 0.05em;
 }
 
-.button-text {
+.menuAndButton-text {
   font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2em;
-  letter-spacing: 0.05em;
-}
-
-.menu-text {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2em;
+  font-weight: 500;
+  line-height: 29.8px;
   letter-spacing: 0.05em;
 }
 
 .body-text {
   font-size: 16px;
-  line-height: 1.2em;
+  font-weight: 400;
+  line-height: 29.8px;
   letter-spacing: 0.05em;
 }
 
-.body-text-bold {
-  font-size: 16px;
+.body-text2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+
+.small-text-bold {
+  font-size: 12.8px;
   font-weight: bold;
-  line-height: 1.2em;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.small-text {
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 22px;
   letter-spacing: 0.05em;
 }
