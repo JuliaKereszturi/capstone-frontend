@@ -1,5 +1,5 @@
 import "./App.css";
-import { ReactComponent as CalenderSVG } from "./assets/icons/users/Group 2.svg";
+import { ReactComponent as CalenderSVG } from "./assets/icons/users/group-2.svg";
 function App() {
   return (
     <div className="App flex mt-12 border-8 w-1/2 bg-primary-200 ">
