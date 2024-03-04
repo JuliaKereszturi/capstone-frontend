@@ -1,5 +1,6 @@
 import React from "react";
-import avatarProfile from "../../assets/images/avatarProfile.png";
+import AvatarProfile from "../../assets/images/avatarProfile.png";
+import { ReactComponent as EditSquare } from "../../assets/icons/files/Edit-Square.svg";
 
 const PersonalDetails = () => {
   return (
@@ -11,21 +12,24 @@ const PersonalDetails = () => {
         boxShadow: "2px 4px 6px 0 rgba(0, 0, 0, 0.13)",
       }}
     >
-      <div className="flex items-center space-x-5">
-        <img
-          src={avatarProfile} // If the image is imported
-          alt="Joy Gomba"
-          className="rounded-full"
-          // Set width and height if necessary
-          // style={{ width: '510px', height: '524px' }}
-        />
-        <div>
-          <h1 className="text-2xl font-bold text-black-600 leading-tight">
-            Joy Gomba
-          </h1>
-          <p className="text-primary-400 font-normal">Project Manager</p>
-          <p className="text-grayish">Harare, Zimbabwe</p>
+      <div className="flex justify-between ">
+        <div className="flex items-center space-x-5">
+          <img
+            src={AvatarProfile} // If the image is imported
+            alt="Joy Gomba"
+            className="rounded-full"
+            // Set width and height if necessary
+            style={{ width: "74px", height: "74px" }}
+          />
+          <div>
+            <h1 className="text-2xl font-bold text-black-600 leading-tight">
+              Joy Gomba
+            </h1>
+            <p className="text-primary-400 font-normal">Project Manager</p>
+            <p className="text-grayish text-[13px]">Harare, Zimbabwe</p>
+          </div>
         </div>
+        <EditSquare className="w-5 h-5  fill-current text-primary-600" />
       </div>
       <div className="my-4">
         <h3 className="text-lg text-primary-500 font-semibold">Bio</h3>
@@ -56,7 +60,7 @@ const PersonalDetails = () => {
           <h4 className="text-sm font-semibold text-primary-400">LinkedIn:</h4>
           <p className="text-sm text-grayish">www.linkedin.com/joy...</p>
         </div>
-        <div className="flex justify-between mb-5">
+        <div className="flex justify-between">
           <h4 className="text-sm font-semibold text-primary-400">
             Availability:
           </h4>
