@@ -5,14 +5,14 @@ import { ReactComponent as EditSquare } from "../../assets/icons/files/Edit-Squa
 const PersonalDetails = () => {
   return (
     <div
-      className=" border rounded-lg border-gray-200 shadow-custom"
+      className="border rounded-lg border-gray-200 shadow-custom"
       style={{
         padding: "30px", // This sets the padding to 30px
         borderRadius: "10px", // This sets the border-radius to 10px
         boxShadow: "2px 4px 6px 0 rgba(0, 0, 0, 0.13)",
       }}
     >
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
         <div className="flex items-center space-x-5">
           <img
             src={AvatarProfile} // If the image is imported
@@ -33,7 +33,7 @@ const PersonalDetails = () => {
       </div>
       <div className="my-4">
         <h3 className="text-lg text-primary-500 font-semibold">Bio</h3>
-        <p className="text-grayish">
+        <p className="text-grayish text-[13px]">
           Experienced project manager with a track record of success in diverse
           industries. Certified as a Project Management Professional (PMP) and
           skilled in agile methodologies. Strong leadership, budgeting, risk
