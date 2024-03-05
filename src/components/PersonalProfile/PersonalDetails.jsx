@@ -29,7 +29,7 @@ const PersonalDetails = () => {
             <p className="text-grayish text-[13px]">Harare, Zimbabwe</p>
           </div>
         </div>
-        <EditSquare className="w-5 h-5  fill-current text-primary-600" />
+        <EditSquare className="min-w-6 min-h-6 w-5 h-5 fill-current text-primary-600" />
       </div>
       <div className="my-4">
         <h3 className="text-lg text-primary-500 font-semibold">Bio</h3>

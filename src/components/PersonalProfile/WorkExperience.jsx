@@ -63,14 +63,12 @@ const WorkExperience = () => {
               ))}
             </ul>
           </div>
-          <EditSquare className="w-6 h-6 fill-current text-primary-600" />
+          <EditSquare className=" min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600" />
         </div>
       ))}
 
       <button className="flex items-center justify-center bg-white text-primary-400 border border-primary-400 font-roboto py-2 px-4 rounded hover:bg-primary-500 hover:border-primary-500 hover:text-white transition ease-in duration-200">
-        
-          <AddSvg />
-       
+        <AddSvg />
         Add Work Experience
       </button>
     </div>

@@ -1,6 +1,9 @@
 import "./App.css";
 import { ReactComponent as CalenderSVG } from "./assets/icons/users/group-2.svg";
 import WorkExperience from "./components/PersonalProfile/WorkExperience";
+import CertificatesAndLicenses from "./components/PersonalProfile/CertificatesAndLicenses";
+import ResumeUploadCard from "./components/PersonalProfile/ResumeUploadCard";
+
 function App() {
   return (
     // <div className="App flex mt-12 border-8 w-1/2 bg-primary-200 ">
@@ -12,6 +15,8 @@ function App() {
     <div className=" m-12  ">
       {/* <PersonalDetails /> */}
       <WorkExperience/>
+      <CertificatesAndLicenses/>
+      <ResumeUploadCard/>
 </div>
   );
 }
