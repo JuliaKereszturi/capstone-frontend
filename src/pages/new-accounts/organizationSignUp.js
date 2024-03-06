@@ -9,8 +9,8 @@ export default function OrganizationSignUp() {
   return (
     <div>
       <div className="flex flex-row page-box">
-        <div className="flex flex-col signup-box">
-          <Logo className="zinio-logo" />
+        <div className="flex flex-col signup-box pt-32 relative">
+          <Logo className="zinio-logo absolute top-0 left-0" />
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
@@ -37,7 +37,7 @@ export default function OrganizationSignUp() {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col pb-8">
               <div className="relative pb-1">
                 <p class="small-text-bold font-roboto">Organization</p>
                 <svg className=" absolute top-full stroke-primary-600">
@@ -53,10 +53,12 @@ export default function OrganizationSignUp() {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1 className="font-roboto h2">Create Your Zinio Account</h1>
-            <p class="small-text font-roboto text-grayish mt-5 mb-10">
-              You're one step away from your role
-            </p>
+            <div className="flex flex-col relative absolute create-account-text-box">
+              <h1 className="font-roboto h2">Create Your Zinio Account</h1>
+              <p class="small-text font-roboto text-grayish mt-5 mb-10">
+                You're one step away from your role
+              </p>
+            </div>
             <div className="flex flex-row">
               <InputField
                 label="First Name"
