@@ -4,7 +4,7 @@ import mainImage3 from "../../assets/images/account-creation-login/main-image3.p
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
-export default function OrganizationSignUp() {
+export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div>
@@ -14,19 +14,8 @@ export default function OrganizationSignUp() {
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
-                <p
-                  className="group font-roboto small-text hover:font-bold"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  Personal Account
-                </p>
-                <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
-                  style={{ pointerEvents: "none" }}
-                >
+                <p class="small-text-bold font-roboto">Personal Account</p>
+                <svg className=" absolute top-full stroke-primary-600">
                   <line
                     x1="5"
                     y1="0"
@@ -39,8 +28,19 @@ export default function OrganizationSignUp() {
             </div>
             <div className="flex flex-col">
               <div className="relative pb-1">
-                <p class="small-text-bold font-roboto">Organization</p>
-                <svg className=" absolute top-full stroke-primary-600">
+                <p
+                  className="group font-roboto small-text hover:font-bold"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  Organization
+                </p>
+                <svg
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
+                    isHovered ? "opacity-100" : "opacity-0"
+                  }`}
+                  style={{ pointerEvents: "none" }}
+                >
                   <line
                     x1="5"
                     y1="0"
@@ -54,7 +54,7 @@ export default function OrganizationSignUp() {
           </div>
           <div className="flex flex-col">
             <h1 className="font-roboto h2">Create Your Zinio Account</h1>
-            <p class="small-text font-roboto text-grayish mt-5 mb-10">
+            <p class="small-text font-roboto text-grayish mb-10 mt-5">
               You're one step away from your role
             </p>
             <div className="flex flex-row">
@@ -77,18 +77,7 @@ export default function OrganizationSignUp() {
                 style={{ height: "56px", width: "220px", marginRight: "10px" }}
               />
             </div>
-            <InputField
-              label="Company Name"
-              type="text"
-              placeholder="Velocity Technology Inc"
-              required
-              style={{
-                height: "56px",
-                width: "450px",
-                marginTop: "6px",
-                marginRight: "10px",
-              }}
-            />
+
             <InputField
               label="Email"
               type="email"
