@@ -2,10 +2,10 @@ import Button from "../../components/button/buttons";
 import InputField from "../../components/input_fields/input_fields";
 import mainImage3 from "../../assets/images/account-creation-login/main-image2.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
-
+import React, { useState } from "react";
 import "./signUp.css";
 export default function OrganizationSignUp() {
- 
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div>
       <div className="flex flex-row page-box">
@@ -14,7 +14,7 @@ export default function OrganizationSignUp() {
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
-                <p className="small-text-bold font-roboto">Personal Account</p>
+                <p class="small-text-bold font-roboto">Personal Account</p>
                 <svg className=" absolute top-full stroke-primary-600">
                   <line
                     x1="5"
@@ -28,17 +28,16 @@ export default function OrganizationSignUp() {
             </div>
             <div className="flex flex-col pb-8">
               <div className="relative pb-1">
-                {/* <p
+                <p
                   className="group font-roboto small-text hover:font-bold"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   Organization
-                </p> */}
+                </p>
                 <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${isHovered ? "opacity-100" : "opacity-0"
+                    }`}
                   style={{ pointerEvents: "none" }}
                 >
                   <line
@@ -53,12 +52,12 @@ export default function OrganizationSignUp() {
             </div>
           </div>
           <div className="flex flex-col">
-            {/* <div className="flex flex-col relative absolute create-account-text-box">
+            <div className="flex flex-col relative absolute create-account-text-box">
               <h1 className="font-roboto h2">Create Your Zinio Account</h1>
-              <p className="small-text font-roboto text-grayish mt-5 mb-10">
+              <p class="small-text font-roboto text-grayish mt-5 mb-10">
                 You're one step away from your role
               </p>
-            </div> */}
+            </div>
             <div className="flex flex-row">
               <InputField
                 label="First Name"
@@ -111,13 +110,13 @@ export default function OrganizationSignUp() {
                 marginRight: "10px",
               }}
               variant="create-account"
-              onClick={() => {}}
+              onClick={() => { }}
             >
               Create Account
             </Button>
             <div className="small-text text-grayish flex flex-row">
-              <p className="mt-4 mb-4">Already have a Zinio account? </p>{" "}
-              <a className="font-bold pl-1 text-primary-600 mt-4" href="/">
+              <p class="mt-4 mb-4">Already have a Zinio account? </p>{" "}
+              <a class="font-bold pl-1 text-primary-600 mt-4" href="/">
                 Sign In
               </a>
             </div>
