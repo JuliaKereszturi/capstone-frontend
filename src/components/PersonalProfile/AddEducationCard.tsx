@@ -19,16 +19,10 @@ interface AddEducationCardProps {
     onAddClick,
   }) => {
     return (
-      <div
-        className="bg-white shadow-custom p-4 border border-gray-200 rounded-lg shadow-md max-w-sm"
-        style={{
-          padding: "30px 20px",
-          borderRadius: "20px",
-          boxShadow: "4px 5px 20px 4px #95989E14",
-        }}
-      >
+      //  <div className="bg-white rounded-2xl p-6 shadow-lg max-w-[410px] mx-auto"></div>
+      <div className="bg-white shadow-lg p-6 border rounded-[20px] border-gray-200 rounded-xlg max-w-[410px]">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold text-gray-700">{title}</h2>
+          <h2 className="h4 font-roboto font-semibold mb-4">{title}</h2>
           <EditSquare className="min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600" />
         </div>
         {items.map((item, index) => (
