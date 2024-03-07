@@ -25,6 +25,7 @@ module.exports = {
           600: "#004c4c",
         },
         grayish: "#666666",
+        grayMedium:"#8C8C8C",
         light: "#f4f4f4",
 
         primaryBlue: {

@@ -3,16 +3,16 @@ import { ReactComponent as UploadIcon } from "../../assets/icons/files/Document-
 
 const ResumeUploadCard = () => {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-lg max-w-sm mx-auto">
-      <h2 className="text-xl font-bold mb-4">Resume</h2>
-      <div className="flex items-center justify-between mb-4">
-        <button className="flex items-center bg-customTeal text-white px-4 py-2 rounded-lg">
+    <div className="bg-white rounded-2xl p-6 shadow-lg max-w-[410px] mx-auto">
+      <p className=" h4 font-roboto font-semibold mb-4 gap-2">Resume</p>
+      <div className="flex flex-wrap items-center justify-between mb-4">
+        <button className="mr-1 flex items-center border text-primary-300 px-4 py-2 rounded-lg">
           <UploadIcon className="w-6 h-6 fill-current mr-2" />
           Upload Resume
         </button>
-        <span className="text-sm text-gray-600">
+        <p className="pt-1 font-roboto text-sm font-normal text-grayMedium">
           Supported Format: PDF, TXT
-        </span>
+        </p>
       </div>
     </div>
   );
