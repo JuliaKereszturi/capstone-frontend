@@ -1,0 +1,50 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 219px;
+  height: 40px;
+}
+
+.btn:hover {
+  background-color: #006666;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #004c4c;
+}
+
+.btn-secondary {
+  color: #004c4c;
+  background-color: transparent;
+  border: 2px solid #004c4c;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-create-account {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 450px;
+  height: 56px;
+  background-color: #004c4c;
+}
