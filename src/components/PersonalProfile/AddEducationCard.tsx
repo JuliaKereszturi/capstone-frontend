@@ -26,7 +26,7 @@ interface AddEducationCardProps {
           <p className="h4 font-roboto !font-semibold mb-2">{title}</p>
           <EditSquare className="min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600" />
         </div>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <div className="mb-2" key={`${item.name}-${item.year}`}>
             <h3 className="!font-semibold h5 text-primary-450 !tracking-normal ">
               {item.name}
