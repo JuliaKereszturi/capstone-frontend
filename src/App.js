@@ -5,7 +5,7 @@ import WorkExperience from "./components/PersonalProfile/WorkExperience";
 import CertificatesAndLicenses from "./components/PersonalProfile/CertificatesAndLicenses.tsx";
 import ResumeUploadCard from "./components/PersonalProfile/ResumeUploadCard";
 import Education from "./components/PersonalProfile/Education.tsx";
-
+import PersonalDetails from "./components/PersonalProfile/PersonalDetails.tsx";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
     <div className=" m-12  ">
       {/* <PersonalDetails /> */}
       <WorkExperience />
+      <PersonalDetails/>
       <CertificatesAndLicenses />
       <Education />
       <ResumeUploadCard />
