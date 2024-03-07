@@ -39,7 +39,7 @@ interface AddEducationCardProps {
         ))}
         <Button
           variant="secondary"
-          onClick={() => console.log("Upload resume button clicked")}
+          onClick={() => console.log("Add Education button clicked")}
         >
           <AddSvg className="w-6 h-6 fill-current mr-2" />
           <p className="font-semibold">Add Education</p>

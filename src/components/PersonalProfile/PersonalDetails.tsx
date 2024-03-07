@@ -31,7 +31,14 @@ const contactDetails: ContactDetail[] = [
   { label: "Availability", value: "2 Weeks" },
 ];
 
+  const handleEditClick = () => {
+    console.log("Edit button clicked");
+  //displaying a form
+   
+  };
+
 const PersonalDetails: React.FC = () => {
+  // State for the personal details
   return (
     <div className="bg-white shadow-lg font-roboto p-6 border rounded-[20px] border-gray-200 rounded-xlg max-w-[510px]">
       <div className="flex justify-between">
@@ -55,7 +62,10 @@ const PersonalDetails: React.FC = () => {
             </p>
           </div>
         </div>
-        <EditSquare className="w-5 h-5 fill-current text-primary-600" />
+
+        <button onClick={handleEditClick}>
+          <EditSquare className="w-5 h-5 fill-current text-primary-600" />
+        </button>
       </div>
       <div className="my-4">
         <h3 className="text-lg text-primary-500 font-semibold">Bio</h3>
@@ -66,7 +76,10 @@ const PersonalDetails: React.FC = () => {
 
       <div>
         {contactDetails.map((detail, index) => (
-          <div key={`{index}-{detail}`} className="flex justify-between mb-5">
+          <div
+            key={`${detail.label}`}
+            className="flex justify-between mb-5"
+          >
             <h4 className="small-text-bold text-primary-400">
               {detail.label}:
             </h4>

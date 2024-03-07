@@ -2,9 +2,15 @@ import React from "react";
 import { ReactComponent as EditSquare } from "../../assets/icons/files/Edit-Square.svg";
 import { ReactComponent as AddSvg } from "../../assets/icons/essential/add.svg";
 import Button from "../button/buttons";
-const WorkExperience = () => {
 
-  const experiences = [
+interface ExperienceProp {
+  role: string;
+  company: string;
+  period: string;
+  descriptions: string[];
+}
+const WorkExperience: React.FC = () => {
+  const experiences: ExperienceProp[] = [
     {
       role: "Project Manager",
       company: "Velocity Technology Inc",
@@ -32,6 +38,11 @@ const WorkExperience = () => {
       ],
     },
   ];
+
+    const handleEditClick = () => {
+      console.log("Edit button clicked");
+      //displaying a form
+    };
 
   return (
     <div
@@ -65,7 +76,10 @@ const WorkExperience = () => {
               ))}
             </ul>
           </div>
-          <EditSquare className=" min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600" />
+          <EditSquare
+            onClick={handleEditClick}
+            className=" min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600"
+          />
         </div>
       ))}
 

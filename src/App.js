@@ -1,7 +1,7 @@
 import "./App.css";
 
 
-import WorkExperience from "./components/PersonalProfile/WorkExperience";
+import WorkExperience from "./components/PersonalProfile/WorkExperience.tsx";
 import CertificatesAndLicenses from "./components/PersonalProfile/CertificatesAndLicenses.tsx";
 import ResumeUploadCard from "./components/PersonalProfile/ResumeUploadCard";
 import Education from "./components/PersonalProfile/Education.tsx";
