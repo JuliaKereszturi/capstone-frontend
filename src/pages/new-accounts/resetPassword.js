@@ -11,10 +11,10 @@ const ResetPassword = () => {
   };
 
   return (
-    // <div className="flex justify-center items-center min-h-screen  bg-white">
-      <div className="flex items-center justify-between p-8 md:p-32 max-w-[1450px] mx-auto">
-        <div className="md:w-1/2 max-w-[450px] max-h-[500px] pr-24">
-        <div className="flex justify-center mb-4 md:justify-start">
+    
+    <div className="flex items-center justify-center md:justify-between p-8 md:p-32 max-w-[1450px] mx-auto">
+        <div className="md:w-[450px] max-w-[450px] max-h-[500px] md:pr-24">
+          <div >
           <Logo className="mb-4 w-32" />
           <h1 className="font-roboto h2 !tracking-normal">Reset Password</h1>
           <p className="small-text font-roboto text-grayish mt-5 mb-10 !tracking-normal">
@@ -54,7 +54,6 @@ const ResetPassword = () => {
         </div>
       </div>
      
-    // </div>
   );
 };
 
