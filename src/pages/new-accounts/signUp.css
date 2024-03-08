@@ -1,27 +1,38 @@
+.page-box {
+  width: 100vw; /* Take up the full width of the parent container */
+  height: 100vh; /* Allow the height to adjust based on content */
+  padding-left: 5.2734375vw; /* 8.375rem / 16px */
+  padding-top: 3.3vh; /* 5.28rem / 16px */
+}
+
 .image-signup {
-  width: 850px;
-  height: 850px;
+  width: 59.375rem; /* 59.375rem / 16px */
+  height: 59.375rem; /* 59.375rem / 16px */
+  padding-left: 0.020625vw; /* 0.33rem / 16px */
 }
 
 .signup-box {
-  width: 460px;
-  height: 946.89;
-  margin-right: 150px;
-  padding-right: 50px;
-}
-
-.page-box {
-  width: 1460px;
-  height: 946.89px;
-  padding-left: 134px;
-  padding-top: 84.55px;
-}
-
-.zinio-logo {
-  width: 224.5px;
-  height: 120.24px;
+  width: 100vw; /* Take up the full width of the parent container */
+  height: 100vh; /* Allow the height to adjust based on content */
+  margin-right: 5.859375vw; /* 9.375rem / 16px */
+  padding-right: 1.953125vw; /* 3.125rem / 16px */
 }
 
 .create-account-text-box {
-  width: 600px;
+  width: 100vw; /* Take up the full width of the parent container */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.zinio-logo {
+  width: 14.03rem; /* 224.5px / 16px */
+  height: 7.515rem; /* 120.24px / 16px */
+}
+.create-account-text-box {
+  width: 200%; /* Take up the full width of the parent container */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.scale-down {
+  transform: scale(0.7);
+  transform-origin: 200px -100px;
 }
