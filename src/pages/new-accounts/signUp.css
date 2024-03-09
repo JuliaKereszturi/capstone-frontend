@@ -6,9 +6,9 @@
 }
 
 .image-signup {
-  width: 59.375rem; /* 59.375rem / 16px */
-  height: 59.375rem; /* 59.375rem / 16px */
-  padding-left: 0.020625vw; /* 0.33rem / 16px */
+  width: 53.125rem; /* 850px / 16px */
+  height: 53.125rem; /* 850px / 16px */
+  padding-left: 0.020625rem; /* 0.33px / 16px */
 }
 
 .signup-box {
