@@ -1,14 +1,13 @@
 import "./App.css";
-
-import ResetPassword from "./pages/new-accounts/resetPassword"; 
-
+import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
+import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
 function App() {
   return (
     <div className="">
-      <ResetPassword />
+      <ContractorSignUp />
     </div>
   );
 }
 
-export default App;
 
+export default App;

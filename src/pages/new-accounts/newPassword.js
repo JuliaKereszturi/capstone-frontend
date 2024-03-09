@@ -3,7 +3,7 @@ import InputField from "../../components/input_fields/input_fields";
 import mainImage3 from "../../assets/images/account-creation-login/main-image3.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import "./signUp.css";
-const ResetPassword = () => {
+const NewPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,35 +11,46 @@ const ResetPassword = () => {
   };
 
   return (
-    
+
     <div className="flex  items-center justify-center  md:justify-between p-8 md:p-32 max-w-[1450px] mx-auto">
-      <div className="absolute md:static block md:flex h-screen inset-0 m-auto  items-center p-5 max-w-full w-[350px] md:w-[450px]  max-h-[500px] md:pr-24">
-          <div >
+      <div className="absolute md:static h-screen inset-0 m-auto  items-center p-5 max-w-full w-[350px] md:w-[450px]  max-h-[500px] md:pr-24">
+        <div >
           <Logo className=" w-48 md:w-32 md:mb-4 mx-auto block md:mx-0" />
           <h1 className="text-center md:text-left font-roboto h4 md:h2 !tracking-normal">Reset Password</h1>
           <div className=" w-full text-center md:text-left small-text font-roboto text-grayish mt-2 md:mt-5 mb-7 md:mb-10 ">
-            Please enter the email address you registered with to receive password reset information.
+            Set your new secure password.
           </div>
           <form onSubmit={handleSubmit}>
 
             <InputField
-              label="Email Address"
-              type="email"
-              placeholder="example@domain.com"
+              label="New Password"
+              type="password"
+              placeholder="************"
               className="bg-grayLighter"
               style={{
-              paddingTop: "0.5rem",
-              paddingBottom: "0.5rem",
-              // backgroundColor:"#F1F1F1"
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+                // backgroundColor:"#F1F1F1"
+              }}
+            />
+            <InputField
+              label="Confirm Password"
+              type="password"
+              placeholder="************"
+              className="bg-grayLighter"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+                // backgroundColor:"#F1F1F1"
               }}
             />
             <Button
               style={{ width: "100%", maxWidth: "450px" }}
               variant="primary"
               onClick={() => { }}
-             
+
             >
-              Reset Password
+              Create Password
             </Button>
           </form>
           <p className="text-center md:text-left small-text font-roboto mt-2 md:mt-4 !tracking-normal">
@@ -47,14 +58,14 @@ const ResetPassword = () => {
           </p>
         </div>
 
-            </div>
-       
-        <div className="hidden md:block md:w-1/2  justify-center">
-          <img src={mainImage3} alt="Collage of happy people" className="rounded-lg" />
-        </div>
       </div>
-     
+
+      <div className="hidden md:block md:w-1/2  justify-center">
+        <img src={mainImage3} alt="Collage of happy people" className="rounded-lg" />
+      </div>
+    </div>
+
   );
 };
 
-export default ResetPassword;
+export default NewPassword;
