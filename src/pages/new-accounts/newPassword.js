@@ -1,6 +1,6 @@
 import Button from "../../components/button/buttons";
 import InputField from "../../components/input_fields/input_fields";
-import mainImage3 from "../../assets/images/account-creation-login/main-image3.png";
+import mainImage1 from "../../assets/images/account-creation-login/main-image1.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import "./signUp.css";
 const NewPassword = () => {
@@ -61,7 +61,7 @@ const NewPassword = () => {
       </div>
 
       <div className="hidden md:block md:w-1/2  justify-center">
-        <img src={mainImage3} alt="Collage of happy people" className="rounded-lg" />
+        <img src={mainImage1} alt="Collage of happy people" className="rounded-lg" />
       </div>
     </div>
 
