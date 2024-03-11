@@ -14,19 +14,10 @@ export default function OrganizationSignUp() {
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
-                <button
-                  className="group font-roboto small-text hover:font-bold"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
+                <button className="small-text-bold font-roboto">
                   Organization
                 </button>
-                <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
-                  style={{ pointerEvents: "none" }}
-                >
+                <svg className=" absolute top-full stroke-primary-600">
                   <line
                     x1="5"
                     y1="0"
@@ -39,11 +30,19 @@ export default function OrganizationSignUp() {
             </div>
             <div className="flex flex-col pb-8">
               <div className="relative pb-1">
-                <button className="small-text-bold font-roboto">
-                  {" "}
+                <button
+                  className="group font-roboto small-text hover:font-bold"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
                   Personal Account
                 </button>
-                <svg className=" absolute top-full stroke-primary-600">
+                <svg
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
+                    isHovered ? "opacity-100" : "opacity-0"
+                  }`}
+                  style={{ pointerEvents: "none" }}
+                >
                   <line
                     x1="5"
                     y1="0"
@@ -98,6 +97,7 @@ export default function OrganizationSignUp() {
                 marginRight: "0.625rem" /* 10px / 16px */,
               }}
             />
+
             <InputField
               label="Email"
               type="email"

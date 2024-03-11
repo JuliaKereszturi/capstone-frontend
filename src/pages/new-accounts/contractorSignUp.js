@@ -4,7 +4,7 @@ import mainImage3 from "../../assets/images/account-creation-login/main-image3.p
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
-export default function OrganizationSignUp() {
+export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="scale-down">
@@ -14,10 +14,19 @@ export default function OrganizationSignUp() {
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
-                <button className="small-text-bold font-roboto">
+                <button
+                  className="group font-roboto small-text hover:font-bold"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
                   Organization
                 </button>
-                <svg className=" absolute top-full stroke-primary-600">
+                <svg
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
+                    isHovered ? "opacity-100" : "opacity-0"
+                  }`}
+                  style={{ pointerEvents: "none" }}
+                >
                   <line
                     x1="5"
                     y1="0"
@@ -30,19 +39,11 @@ export default function OrganizationSignUp() {
             </div>
             <div className="flex flex-col pb-8">
               <div className="relative pb-1">
-                <button
-                  className="group font-roboto small-text hover:font-bold"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
+                <button className="small-text-bold font-roboto">
+                  {" "}
                   Personal Account
                 </button>
-                <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
-                  style={{ pointerEvents: "none" }}
-                >
+                <svg className=" absolute top-full stroke-primary-600">
                   <line
                     x1="5"
                     y1="0"
