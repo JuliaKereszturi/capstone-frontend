@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import carousel_image from '../../assets/images/account-creation-login/main-image2.png';
-import '../../index.css';
+import "./carousel.css";
 
 // Array of text for the carousel slides
 const carouselTexts = [
@@ -38,36 +38,27 @@ const Carousel = ({ image }) => {
 
   return (
     <div
-      className="relative"
-      style={{width: '850px', height: '850px', top:'30px'}}
-      onMouseDown={() => setIsPaused(true)} // Pause carousel on mouse down
-      onMouseUp={() => setIsPaused(false)} // Resume carousel on mouse up
-      onMouseLeave={() => setIsPaused(false)} // Resume carousel on mouse leave
+      className="carousel-container"
+      onMouseDown={() => setIsPaused(true)}
+      onMouseUp={() => setIsPaused(false)}
+      onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Background image for the carousel */}
-      <img src={carousel_image} alt="background" className="w-full h-full object-cover" />
-      <div className="absolute" style={{ color:'#FFFFFF', width: '209px', height: '151px', top: '370px', left: '321px', gap: '30px' }}>
-        {/* Container for the text of the current slide */}
-        <div className="text_container h3" style={{ width:'209px', height: '111px' }}>
-          {carouselTexts[currentIndex]}
-        </div>
-        {/* Navigation dots for the carousel */}
-        <div className="absolute inset-x-0 bottom-0 mx-auto" style={{ width: '50px', height: '10px' }}>
-          <div className="flex items-center justify-center" style={{ gap: "10px" }}>
-            {carouselTexts.map((_, i) => (
-              // Dot for each carousel slide
-              <div
-                key={i}
-                className={`cursor-pointer transition-all w-3 h-3 rounded-full ${currentIndex === i ? 'bg-white' : 'bg-opacity-50'}`}
-                style={{ backgroundColor: currentIndex === i ? '#FFFFFF' : '#008080' }}
-                onClick={() => setIndex(i)} // Set carousel to display the slide corresponding to the dot
-              />
-            ))}
-          </div>
-        </div>
+      <img src={carousel_image} alt="background" className="carousel-background" />
+      <div className="carousel-text">
+        {carouselTexts[currentIndex]}
+      </div>
+      <div className="carousel-dots">
+        {carouselTexts.map((_, i) => (
+          <div
+            key={i}
+            className={`carousel-dot ${currentIndex === i ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(i)}
+          />
+        ))}
       </div>
     </div>
   );
+
 };
 
 export default Carousel;
