@@ -9,7 +9,8 @@
   cursor: pointer;
   color: #fff;
   transition: background-color 0.3s ease;
-  width: 219px;
+  width: 100%;
+  max-width: 450px;
   height: 40px;
 }
 
