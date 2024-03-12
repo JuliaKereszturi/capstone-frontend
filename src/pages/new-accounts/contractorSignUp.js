@@ -4,8 +4,56 @@ import mainImage3 from "../../assets/images/account-creation-login/main-image2.p
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
+
+// import {  Auth } from 'aws-amplify'
+// import { Auth } from '@aws-amplify/ui-react'
+import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 export default function OrganizationSignUp() {
   const [isHovered, setIsHovered] = useState(false);
+
+  async function signUp(username, password) {
+    try {
+      const { user } = await Auth.signUp({
+        username,
+        password,
+        attributes: {
+          email,
+        },
+        autoSignIn: {
+          enabled: true,
+        },
+      });
+      // navigate(`/confirmcode/${username}`);
+      console.log(user);
+    } catch (error) {
+      // console.log('error signing up:', error);
+    }
+  }
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [companyIndustry, setCompanyIndustry] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordMatch, setPasswordMatch] = useState(true);
+  const [fieldError, setFieldError] = useState(false);
+
+
+  
+  const handleCreateAccount = () => {
+
+
+    if (password === confirmPassword) {
+      signUp(email, password);
+      console.log(email, password)
+    } else {
+      setPasswordMatch(false);
+    }
+  };
+
   return (
     <div>
       <div className="flex flex-row page-box">
@@ -65,16 +113,23 @@ export default function OrganizationSignUp() {
                 type="text"
                 placeholder="Farai"
                 required
+                value={firstName}
+                onChange={(e => setFirstName(e.target.value)
+
+                )}
                 style={{
                   height: "56px",
                   width: "220px",
                   marginRight: "10px",
+                  
                 }}
               />
               <InputField
                 label="Last Name"
                 type="text"
                 placeholder="Chamu"
+                value={lastName}
+                onChange={(e => setLastName(e.target.value))}
                 required
                 style={{ height: "56px", width: "220px", marginRight: "10px" }}
               />
@@ -84,6 +139,8 @@ export default function OrganizationSignUp() {
               label="Email"
               type="email"
               placeholder="example@domain.com"
+              value={email}
+              onChange= {(e => setEmail(e.target.value)) }
               style={{
                 height: "56px",
                 width: "450px",
@@ -95,6 +152,8 @@ export default function OrganizationSignUp() {
               label="Password"
               type="password"
               placeholder="************"
+              value={password}
+              onChange = {(e) => setPassword(e.target.value)}
               required
               style={{
                 height: "56px",
@@ -111,7 +170,7 @@ export default function OrganizationSignUp() {
                 marginRight: "10px",
               }}
               variant="create-account"
-              onClick={() => {}}
+              onClick={handleCreateAccount}
             >
               Create Account
             </Button>
