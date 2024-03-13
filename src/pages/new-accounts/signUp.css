@@ -8,7 +8,16 @@
 .image-signup {
   width: 53.125rem; /* 850px / 16px */
   height: 53.125rem; /* 850px / 16px */
+
   padding-left: 0.020625rem; /* 0.33px / 16px */
+}
+
+.organization-image {
+  margin-top: 8.34375rem; /* 133.5px / 16px */
+}
+
+.contractor-image {
+  margin-top: 0;
 }
 
 .signup-box {
