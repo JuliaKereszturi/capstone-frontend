@@ -21,11 +21,14 @@ module.exports = {
           200: "#b2d8d8",
           300: "#66b2b2",
           400: "#008080",
+          450: "#5C8D8D",
           500: "#006666",
           600: "#004c4c",
         },
         grayish: "#666666",
+        grayMedium:"#8C8C8C",
         light: "#f4f4f4",
+        grayLighter: "#F1F1F1",
 
         primaryBlue: {
           100: "#7ABFFF",

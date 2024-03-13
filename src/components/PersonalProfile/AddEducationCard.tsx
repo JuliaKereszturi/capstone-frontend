@@ -2,6 +2,7 @@ import React from "react";
 
 import { ReactComponent as EditSquare } from "../../assets/icons/files/Edit-Square.svg";
 import { ReactComponent as AddSvg } from "../../assets/icons/essential/add.svg";
+import Button from "../button/buttons";
 
 interface AddEducationCardProps {
   title: string;
@@ -19,35 +20,30 @@ interface AddEducationCardProps {
     onAddClick,
   }) => {
     return (
-      <div
-        className="bg-white shadow-custom p-4 border border-gray-200 rounded-lg shadow-md max-w-sm"
-        style={{
-          padding: "30px 20px",
-          borderRadius: "20px",
-          boxShadow: "4px 5px 20px 4px #95989E14",
-        }}
-      >
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold text-gray-700">{title}</h2>
+      //  <div className="bg-white rounded-2xl p-6 shadow-lg max-w-[410px] mx-auto"></div>
+      <div className="bg-white shadow-lg p-6 border rounded-[20px] border-gray-200 rounded-xlg max-w-[410px]">
+        <div className="flex justify-between items-center">
+          <p className="h4 font-roboto !font-semibold mb-2">{title}</p>
           <EditSquare className="min-w-6 min-h-6 w-6 h-6 fill-current text-primary-600" />
         </div>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <div className="mb-2" key={`${item.name}-${item.year}`}>
-            <h3 className="text-md text-primary-400 font-semibold">
+            <h3 className="!font-semibold h5 text-primary-450 !tracking-normal ">
               {item.name}
             </h3>
-            <p className="text-sm text-grayish">{item.detail}</p>
-            <p className="text-sm text-grayish">{item.year}</p>
+            <p className="body-text text-grayish !tracking-normal">
+              {item.detail}
+            </p>
+            <p className="small-text text-grayish">{item.year}</p>
           </div>
         ))}
-
-        <button
-          className="flex items-center justify-center bg-white text-primary-400 border border-primary-400 font-roboto py-2 px-4 rounded hover:bg-primary-500 hover:border-primary-500 hover:text-white transition ease-in duration-200"
-          onClick={onAddClick}
+        <Button
+          variant="secondary"
+          onClick={() => console.log("Add Education button clicked")}
         >
-          <AddSvg />
-          Add Education
-        </button>
+          <AddSvg className="w-6 h-6 fill-current mr-2" />
+          <p className="font-semibold">Add Education</p>
+        </Button>
       </div>
     );
   };

@@ -22,9 +22,8 @@ export default function ContractorSignUp() {
                   Organization
                 </button>
                 <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${isHovered ? "opacity-100" : "opacity-0"
+                    }`}
                   style={{ pointerEvents: "none" }}
                 >
                   <line
@@ -118,7 +117,7 @@ export default function ContractorSignUp() {
                 marginRight: "0.625rem" /* 10px / 16px */,
               }}
               variant="create-account"
-              onClick={() => {}}
+              onClick={() => { }}
             >
               Create Account
             </Button>
