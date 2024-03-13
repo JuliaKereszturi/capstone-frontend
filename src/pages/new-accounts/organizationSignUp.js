@@ -1,5 +1,6 @@
 import Button from "../../components/button/buttons";
 import InputField from "../../components/input_fields/input_fields";
+import DropdownField from "../../components/dropdown/drop_down";
 import mainImage3 from "../../assets/images/account-creation-login/main-image3.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
@@ -10,7 +11,7 @@ export default function OrganizationSignUp() {
     <div className="scale-down">
       <div className="flex f  lex-row page-box">
         <div className="flex flex-col signup-box pt-40 relative">
-          <Logo className="zinio-logo absolute top-10 left-0" />
+          <Logo className="w-40 h-[86px] absolute top-10" />
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
@@ -98,6 +99,24 @@ export default function OrganizationSignUp() {
               }}
             />
 
+            <DropdownField
+              label="Company Industry"
+              options={[
+                { value: "1", label: "Software Development" },
+                { value: "2", label: "Finance" },
+                { value: "3", label: "Health" },
+                { value: "4", label: "Education" },
+                { value: "5", label: "Agriculture" },
+              ]}
+              required
+              style={{
+                height: "3.5rem" /* 56px / 16px */,
+                width: "28.125rem" /* 450px / 16px */,
+                marginTop: "0.375rem" /* 6px / 16px */,
+                marginRight: "0.625rem" /* 10px / 16px */,
+              }}
+            />
+
             <InputField
               label="Email"
               type="email"
@@ -139,7 +158,7 @@ export default function OrganizationSignUp() {
                 Sign In
               </a>
             </div>
-            <div className="small-text text-grayish flex flex-row">
+            <div className="small-text text-grayish flex flex-row text-container">
               <p>
                 By creating an account, you are authorizing{" "}
                 <a className="font-bold pl-1 text-primary-600" href="/">
@@ -160,10 +179,11 @@ export default function OrganizationSignUp() {
             </div>
           </div>
         </div>
+
         <img
-          className="image-signup py-12"
           src={mainImage3}
-          alt="main-image2"
+          alt="Collage of happy people"
+          className="image-signup organization-image justify-center hidden md:block "
         />
       </div>
     </div>

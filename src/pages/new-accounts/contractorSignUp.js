@@ -1,16 +1,17 @@
 import Button from "../../components/button/buttons";
 import InputField from "../../components/input_fields/input_fields";
+import DropdownField from "../../components/dropdown/drop_down";
 import mainImage3 from "../../assets/images/account-creation-login/main-image3.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
-export default function ContractorSignUp() {
+export default function OrganizationSignUp() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="scale-down">
-      <div className="flex f  lex-row page-box">
+      <div className="flex lex-row page-box">
         <div className="flex flex-col signup-box pt-40 relative">
-          <Logo className="zinio-logo absolute top-10 left-0" />
+          <Logo className="zinio-logo absolute top-10" />
           <div className="flex flex-row space-x-4">
             <div className="flex flex-col">
               <div className="relative pb-1">
@@ -21,15 +22,17 @@ export default function ContractorSignUp() {
                 >
                   Organization
                 </button>
+
                 <svg
-                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${isHovered ? "opacity-100" : "opacity-0"
-                    }`}
+                  className={`absolute top-full transition duration-500 ease-in-out stroke-primary-600 ${
+                    isHovered ? "opacity-100" : "opacity-0"
+                  }`}
                   style={{ pointerEvents: "none" }}
                 >
                   <line
                     x1="5"
                     y1="0"
-                    x2="75"
+                    x2="70"
                     y2="0"
                     style={{ strokeWidth: 4 }}
                   />
@@ -39,14 +42,13 @@ export default function ContractorSignUp() {
             <div className="flex flex-col pb-8">
               <div className="relative pb-1">
                 <button className="small-text-bold font-roboto">
-                  {" "}
                   Personal Account
                 </button>
                 <svg className=" absolute top-full stroke-primary-600">
                   <line
                     x1="5"
                     y1="0"
-                    x2="105"
+                    x2="100"
                     y2="0"
                     style={{ strokeWidth: 4 }}
                   />
@@ -117,7 +119,7 @@ export default function ContractorSignUp() {
                 marginRight: "0.625rem" /* 10px / 16px */,
               }}
               variant="create-account"
-              onClick={() => { }}
+              onClick={() => {}}
             >
               Create Account
             </Button>
@@ -127,7 +129,7 @@ export default function ContractorSignUp() {
                 Sign In
               </a>
             </div>
-            <div className="small-text text-grayish flex flex-row">
+            <div className="small-text text-grayish flex flex-row text-container">
               <p>
                 By creating an account, you are authorizing{" "}
                 <a className="font-bold pl-1 text-primary-600" href="/">
@@ -148,10 +150,11 @@ export default function ContractorSignUp() {
             </div>
           </div>
         </div>
+
         <img
-          className="image-signup py-12"
           src={mainImage3}
-          alt="main-image2"
+          alt="Collage of happy people"
+          className="image-signup mt-20 justify-center hidden md:block "
         />
       </div>
     </div>
