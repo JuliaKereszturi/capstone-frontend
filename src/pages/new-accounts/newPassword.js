@@ -2,6 +2,7 @@ import Button from "../../components/button/buttons";
 import InputField from "../../components/input_fields/input_fields";
 import mainImage1 from "../../assets/images/account-creation-login/main-image1.png";
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
+import Carousel from "../../components/carousel/carousel";
 import "./signUp.css";
 const NewPassword = () => {
 
@@ -61,7 +62,8 @@ const NewPassword = () => {
       </div>
 
       <div className="hidden md:block md:w-1/2  justify-center">
-        <img src={mainImage1} alt="Collage of happy people" className="rounded-lg" />
+        <Carousel/>
+        {/* <img src={mainImage1} alt="Collage of happy people" className="rounded-lg" /> */}
       </div>
     </div>
 
