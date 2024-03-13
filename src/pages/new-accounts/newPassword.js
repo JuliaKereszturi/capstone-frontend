@@ -13,10 +13,10 @@ const NewPassword = () => {
   return (
 
     <div className="flex  items-center justify-center  md:justify-between p-8 md:p-32 max-w-[1450px] mx-auto">
-      <div className="absolute md:static h-screen inset-0 m-auto  items-center p-5 max-w-full w-[350px] md:w-[450px]  max-h-[500px] md:pr-24">
+      <div className="absolute md:static h-screen inset-0 m-auto md:m-none items-center p-5 md:pl-0  max-w-full w-[350px] md:w-[450px]  max-h-[500px] md:pr-24">
         <div >
           <Logo className=" w-48 md:w-32 md:mb-4 mx-auto block md:mx-0" />
-          <h1 className="text-center md:text-left font-roboto h4 md:h2 !tracking-normal">Reset Password</h1>
+          <h1 className="text-center md:text-left font-roboto h4 md:h2 !tracking-normal">New Password</h1>
           <div className=" w-full text-center md:text-left small-text font-roboto text-grayish mt-2 md:mt-5 mb-7 md:mb-10 ">
             Set your new secure password.
           </div>
