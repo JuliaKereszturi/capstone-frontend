@@ -1,9 +1,14 @@
 import "./App.css";
-import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
+
 import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
-import ResetPassword from "./pages/new-accounts/resetPassword";
+import { isValidInputTimeValue } from "@testing-library/user-event/dist/utils";
+
 function App() {
-  return <OrganizationSignUp />;
+  return (
+    <div>
+      <OrganizationSignUp />
+    </div>
+  );
 }
 
 export default App;

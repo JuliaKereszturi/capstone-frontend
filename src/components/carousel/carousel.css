@@ -1,0 +1,88 @@
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%; /* Make width responsive */
+  max-width: 850px; /* Maximum width */
+  height: auto; /* Adjust height automatically */
+  aspect-ratio: 1; /* Maintain square shape */
+  margin-top: 30px; /* Previously 'top: 30px;' */
+}
+
+.carousel-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without losing aspect ratio */
+}
+
+.carousel-text {
+  position: absolute;
+  color: #FFFFFF;
+  top: 50%; /* Adjust based on your layout */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 31.3px; /* Base font size */
+  font-weight: 800;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  font-family: 'Roboto', sans-serif;
+  width: 209px; /* Maximum width */
+  height: 151px; /* Maximum height */
+  overflow: hidden; /* Ensures text doesn't spill outside */
+  display: flex;
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  padding: 10px; /* Add padding as necessary but it will reduce effective text area */
+}
+.carousel-dots {
+  position: absolute;
+  width: auto; /* Adjust based on the total width of the dots */
+  top: 57%; /* Position the dots just below the text */
+  left: 50%; /* Center the dots horizontally in the container */
+  transform: translate(-50%, 20px); /* Adjust vertically below the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adjust based on your design */
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #008080; /* Default color */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #FFFFFF;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .carousel-text {
+    font-size: calc(16px + 1.5vw); /* Responsive font size */
+    padding: 8px; /* Slightly smaller padding */
+  }
+  .carousel-dots {
+    top: 57% ; /* Adjust based on text size */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-container {
+    margin-top: 20px;
+  }
+  .carousel-text {
+    font-size: calc(12px + 1vw); /* Adjust font size for smaller screens */
+    padding: 4px; /* Reduced padding for smaller screens */
+  }
+  .carousel-dots {
+    top: 57% /* Adjust based on new text position */
+  }
+}
+
+
