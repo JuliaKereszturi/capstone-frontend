@@ -3,7 +3,7 @@ import Button from "../button/buttons";
 
 const JobCard = () => {
   return (
-    <div className="bg-veryLightGray rounded-custom border-[0.5px] border-softTeal p-[20px]">
+    <div className="bg-veryLightGray max-w-[1018px] rounded-custom border-[0.5px] border-softTeal p-[20px]">
       <div className="flex justify-between items-center mb-4">
         <div className="flex">
           <div className="text-[12px]  bg-darkTeal text-white rounded-[36px] px-[8px] pt-[3px] h-[23px]">
