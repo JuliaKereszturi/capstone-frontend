@@ -11,7 +11,7 @@ export default function SetNewPassword() {
         <div className="flex flex-col signup-box pt-32 relative">
           <Logo className="zinio-logo absolute top-0 left-0" />
           <div className="flex flex-col">
-            <div className="flex flex-col relative absolute create-account-text-box">
+            <div className="flex flex-col relative create-account-text-box">
               <h1 className="font-roboto h2">New Password</h1>
               <p class="small-text font-roboto text-grayish mt-5 mb-10">
                 Set your new secure password

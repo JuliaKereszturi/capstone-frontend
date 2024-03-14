@@ -56,7 +56,7 @@ export default function OrganizationSignUp() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-col relative absolute create-account-text-box">
+            <div className="flex flex-col relative  create-account-text-box">
               <h1 className="font-roboto h2">Create Your Zinio Account</h1>
               <p className="small-text font-roboto text-grayish mt-5 mb-10">
                 You're one step away from your role
