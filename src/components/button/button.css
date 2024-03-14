@@ -27,6 +27,8 @@
   color: #004c4c;
   background-color: transparent;
   border: 2px solid #004c4c;
+   width: 100%;
+  max-width: 450px;
 }
 
 .btn-disabled {
