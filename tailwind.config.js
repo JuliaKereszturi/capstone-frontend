@@ -23,6 +23,8 @@ module.exports = {
           400: "#008080",
           450: "#5C8D8D",
           500: "#006666",
+          550: "#709B9B",
+          575: "#337070",
           600: "#004c4c",
         },
         grayish: "#666666",
@@ -35,6 +37,12 @@ module.exports = {
           200: "#1456FC",
           300: "#303DBF",
         },
+      },
+      boxShadow: {
+        'custom': '0px 4px 12px -2px #33707033',
+      },
+      borderRadius: {
+        'custom': '20px',
       },
     },
   },
