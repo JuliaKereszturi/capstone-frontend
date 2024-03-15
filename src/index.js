@@ -22,13 +22,13 @@ root.render(
 // })
 
 
-Amplify.configure({
-  Auth: {
-    region: "us-east-1",
-    userPoolId: "us-east-1_EbrAdF2L3",
-    userPoolWebClientId: "j0o4cuh5aj1md36h8uma2ujs9",
-    loginWith : {
-      username: true
-    }
-  }
-})
+// Amplify.configure({
+//   Auth: {
+//     region: "us-east-1",
+//     userPoolId: "us-east-1_b4F3Iikjv",
+//     userPoolWebClientId: "5a9eaid7lgcub5ifv2474tmr3t",
+//     loginWith : {
+//       username: true
+//     }
+//   }
+// })
