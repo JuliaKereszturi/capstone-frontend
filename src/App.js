@@ -3,9 +3,10 @@ import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
 import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
 // import { Amplify } from "aws-amplify";
 // import awsExports from "../aws-exports";
+
 function App() {
   return (
-    <div className="">
+    <div>
       <ContractorSignUp />
     </div>
   );
