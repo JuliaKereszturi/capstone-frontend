@@ -4,55 +4,50 @@ import mainImage3 from "../../assets/images/account-creation-login/main-image2.p
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
+import { signUp } from 'aws-amplify/auth';
 
-// import {  Auth } from 'aws-amplify'
-// import { Auth } from '@aws-amplify/ui-react'
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+
 import '@aws-amplify/ui-react/styles.css';
-export default function OrganizationSignUp() {
+export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
-
-  async function signUp(username, password) {
-    try {
-      const { user } = await Auth.signUp({
-        username,
-        password,
-        attributes: {
-          email,
-        },
-        autoSignIn: {
-          enabled: true,
-        },
-      });
-      // navigate(`/confirmcode/${username}`);
-      console.log(user);
-    } catch (error) {
-      // console.log('error signing up:', error);
-    }
-  }
-
-  const [firstName, setFirstName] = useState("");
+  const [username, setFirstName] = useState("")
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [companyIndustry, setCompanyIndustry] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("barnabas+3@velocityinc.tech");
+  const [password, setPassword] = useState("Pasiwedhi123.");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [fieldError, setFieldError] = useState(false);
 
-
-  
-  const handleCreateAccount = () => {
+  async function handleSignUp() {
 
 
-    if (password === confirmPassword) {
-      signUp(email, password);
-      console.log(email, password)
-    } else {
-      setPasswordMatch(false);
-    }
-  };
+   console.log('hrtre', username)
+    // try {
+    //   const {  userId } = await signUp({
+    //     username,
+    //     password,
+    //     options: {
+    //       userAttributes: {
+    //         email,
+    //         // phone_number // E.164 number convention
+    //       },
+    //       // optional
+    //       autoSignIn: true // or SignInOptions e.g { authFlowType: "USER_SRP_AUTH" }
+    //     }
+    //   });
+
+    //   console.log(userId);
+    // } catch (error) {
+    //   console.log('error signing up:', error);
+    // }
+  }
+
+  function testUser() {
+
+  }
+
 
   return (
     <div>
@@ -101,7 +96,7 @@ export default function OrganizationSignUp() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-col relative absolute create-account-text-box">
+            <div className="flex flex-col relative create-account-text-box">
               <h1 className="font-roboto h2">Create Your Zinio Account</h1>
               <p class="small-text font-roboto text-grayish mt-5 mb-10">
                 You're one step away from your role
@@ -113,7 +108,7 @@ export default function OrganizationSignUp() {
                 type="text"
                 placeholder="Farai"
                 required
-                value={firstName}
+                value={username}
                 onChange={(e => setFirstName(e.target.value)
 
                 )}
@@ -140,7 +135,7 @@ export default function OrganizationSignUp() {
               type="email"
               placeholder="example@domain.com"
               value={email}
-              onChange= {(e => setEmail(e.target.value)) }
+              onChange= {(e) => setEmail(e.target.value)}
               style={{
                 height: "56px",
                 width: "450px",
@@ -170,7 +165,7 @@ export default function OrganizationSignUp() {
                 marginRight: "10px",
               }}
               variant="create-account"
-              onClick={handleCreateAccount}
+              onClick={() => handleSignUp()}
             >
               Create Account
             </Button>

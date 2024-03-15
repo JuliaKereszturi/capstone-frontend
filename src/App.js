@@ -1,17 +1,17 @@
-// import "./App.css";
-// import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
-// import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
-// // import { Amplify } from "aws-amplify";
-// // import awsExports from "../aws-exports";
-// function App() {
-//   return (
-//     <div className="">
-//       <ContractorSignUp />
-//     </div>
-//   );
-// }
+import "./App.css";
+import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
+import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
+// import { Amplify } from "aws-amplify";
+// import awsExports from "../aws-exports";
+function App() {
+  return (
+    <div className="">
+      <ContractorSignUp />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 
 // import logo from "./logo.svg";
@@ -39,20 +39,20 @@
 
 // export default withAuthenticator(App);
 
-import { Amplify } from 'aws-amplify';
+// import { Amplify } from 'aws-amplify';
 
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import config from './amplifyconfiguration.json';
-Amplify.configure(config);
+// import { withAuthenticator } from '@aws-amplify/ui-react';
+// import '@aws-amplify/ui-react/styles.css';
+// import config from './amplifyconfiguration.json';
+// Amplify.configure(config);
 
-function App({ signOut, user }) {
-  return (
-    <>
-      <h1>Hello {user.username}</h1>
-      <button onClick={signOut}>Sign out</button>
-    </>
-  );
-}
+// function App({ signOut, user }) {
+//   return (
+//     <>
+//       <h1>Hello {user.username}</h1>
+//       <button onClick={signOut}>Sign out</button>
+//     </>
+//   );
+// }
 
-export default withAuthenticator(App);
+// export default withAuthenticator(App);
