@@ -5,8 +5,51 @@ import mainImage3 from "../../assets/images/account-creation-login/main-image3.p
 import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
 import React, { useState } from "react";
 import "./signUp.css";
-export default function OrganizationSignUp() {
+import { signUp } from 'aws-amplify/auth';
+
+
+import '@aws-amplify/ui-react/styles.css';
+export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
+  const [username, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [companyIndustry, setCompanyIndustry] = useState("");
+  const [email, setEmail] = useState("barnabas+3@velocityinc.tech");
+  const [password, setPassword] = useState("Pasiwedhi123.");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordMatch, setPasswordMatch] = useState(true);
+  const [fieldError, setFieldError] = useState(false);
+
+  async function handleSignUp() {
+
+
+   console.log('hrtre', username)
+    // try {
+    //   const {  userId } = await signUp({
+    //     username,
+    //     password,
+    //     options: {
+    //       userAttributes: {
+    //         email,
+    //         // phone_number // E.164 number convention
+    //       },
+    //       // optional
+    //       autoSignIn: true // or SignInOptions e.g { authFlowType: "USER_SRP_AUTH" }
+    //     }
+    //   });
+
+    //   console.log(userId);
+    // } catch (error) {
+    //   console.log('error signing up:', error);
+    // }
+  }
+
+  function testUser() {
+
+  }
+
+
   return (
     <div className="scale-down">
       <div className="flex lex-row page-box">
@@ -69,16 +112,22 @@ export default function OrganizationSignUp() {
                 type="text"
                 placeholder="Farai"
                 required
+                value={username}
+                onChange={(e => setFirstName(e.target.value)
+
+                )}
                 style={{
-                  height: "3.5rem" /* 56px / 16px */,
-                  width: "13.75rem" /* 220px / 16px */,
-                  marginRight: "0.625rem" /* 10px / 16px */,
+                  height: "56px",
+                  width: "220px",
+                  marginRight: "10px",
                 }}
               />
               <InputField
                 label="Last Name"
                 type="text"
                 placeholder="Chamu"
+                value={lastName}
+                onChange={(e => setLastName(e.target.value))}
                 required
                 style={{
                   height: "3.5rem" /* 56px / 16px */,
@@ -92,6 +141,8 @@ export default function OrganizationSignUp() {
               label="Email"
               type="email"
               placeholder="example@domain.com"
+              value={email}
+              onChange= {(e) => setEmail(e.target.value)}
               style={{
                 height: "3.5rem" /* 56px / 16px */,
                 width: "28.125rem" /* 450px / 16px */,
@@ -103,6 +154,8 @@ export default function OrganizationSignUp() {
               label="Password"
               type="password"
               placeholder="************"
+              value={password}
+              onChange = {(e) => setPassword(e.target.value)}
               required
               style={{
                 height: "3.5rem" /* 56px / 16px */,
@@ -119,7 +172,7 @@ export default function OrganizationSignUp() {
                 marginRight: "0.625rem" /* 10px / 16px */,
               }}
               variant="create-account"
-              onClick={() => {}}
+              onClick={() => handleSignUp()}
             >
               Create Account
             </Button>

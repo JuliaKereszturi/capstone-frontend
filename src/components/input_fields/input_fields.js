@@ -9,6 +9,7 @@ class InputField extends Component {
       isValid: true,
       errorMessage: "",
     };
+    this.handleChange = this.handleChange.bind()
   }
 
   handleChange = (e) => {
