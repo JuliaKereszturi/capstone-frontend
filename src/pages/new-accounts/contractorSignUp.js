@@ -10,12 +10,12 @@ import { signUp } from 'aws-amplify/auth';
 import '@aws-amplify/ui-react/styles.css';
 export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
-  const [username, setFirstName] = useState("barnabas+4@velocityinc.tech")
+  const [username, setFirstName] = useState("")
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [companyIndustry, setCompanyIndustry] = useState("");
-  const [email, setEmail] = useState("barnabas+4@velocityinc.tech");
-  const [password, setPassword] = useState("Pasiwedhi123.");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [fieldError, setFieldError] = useState(false);
