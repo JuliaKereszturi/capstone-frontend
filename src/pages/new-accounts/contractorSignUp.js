@@ -10,7 +10,8 @@ import { signUp } from 'aws-amplify/auth';
 import '@aws-amplify/ui-react/styles.css';
 export default function ContractorSignUp() {
   const [isHovered, setIsHovered] = useState(false);
-  const [username, setFirstName] = useState("")
+  const [username, setUserName] = useState("")
+  const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [companyIndustry, setCompanyIndustry] = useState("");
@@ -105,7 +106,8 @@ export default function ContractorSignUp() {
                 type="text"
                 placeholder="Farai"
                 required
-                value={username}
+                value={firstName}
+                className="placeholder-gray-300 placeholder:font-sm"
                 onChange={(e => setFirstName(e.target.value)
 
                 )}
@@ -121,6 +123,7 @@ export default function ContractorSignUp() {
                 type="text"
                 placeholder="Chamu"
                 value={lastName}
+                className="placeholder-gray-300 placeholder:font-sm"
                 onChange={(e => setLastName(e.target.value))}
                 required
                 style={{ height: "56px", width: "220px", marginRight: "10px" }}
@@ -131,8 +134,9 @@ export default function ContractorSignUp() {
               label="Email"
               type="email"
               placeholder="example@domain.com"
-              value={email}
-              onChange= {(e) => setEmail(e.target.value)}
+              value={username}
+              className="placeholder-gray-300 placeholder:font-sm"
+              onChange= {(e) => setUserName(e.target.value)}
               style={{
                 height: "56px",
                 width: "450px",
@@ -145,6 +149,7 @@ export default function ContractorSignUp() {
               type="password"
               placeholder="************"
               value={password}
+              className="placeholder-gray-300 placeholder:font-sm"
               onChange = {(e) => setPassword(e.target.value)}
               required
               style={{
