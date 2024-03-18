@@ -21,7 +21,7 @@ export default function ProfileTab({ name, isSelected }) {
 
   return (
     <div
-      className="flex overflow-hidden rounded-lg p-4 shadow"
+      className="flex-auto flex overflow-hidden rounded-lg p-4 shadow"
       style={{ backgroundColor: isSelected ? "#337070" : "#EBF1F1" }}
     >
       {icon}
