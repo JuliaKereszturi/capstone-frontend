@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,5 +68,59 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# project
-# project
+
+### Custom TailwindCSS Configuration
+
+This section has moved here: [https://tailwindcss.com/docs/guides/create-react-app](https://tailwindcss.com/docs/guides/create-react-app)
+
+--- TailwindCSS Font Family ---
+-Roboto imported from Google Fonts(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap)
+
+--- TailwindCSS Custom Color Pallette ---
+-Primary:
+100: "#f0fff3", (Very Light Turquoise)
+200: "#b2d8d8", (Light Turquoise)
+300: "#66b2b2", (Turquoise)
+400: "#008080", (Darkened Turquoise)
+500: "#006666", (Dark Turquoise)
+600: "#004c4c", (Very Dark Turquoise)
+
+-Grayish: #666666 (Dark Gray)
+-Light: #f4f4f4 (Light Beige)
+
+### Custom Classes
+
+--- TailwindCSS Custom Headers ---
+-h1: fontSize "49px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h2: fontSize "39px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h3: fontSize "31.3px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h4: fontSize "25px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h5: fontSize "20px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-h6: fontSize "16px", fontWeight: "800" lineSpacing "1.2em", characterSpacing "0.05em"
+-button-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
+-body-text: fontSize "16px", fontWeight: "regular" lineSpacing "1.2em", characterSpacing "0.05em"
+-menu-text: fontSize "16px", fontWeight: "medium" lineSpacing "1.2em", characterSpacing "0.05em"
+
+### SVG Implementation
+
+1. Import desired SVG file into module via {ReactComponent as ComponentName} from 'assets/icons/{any folder inside assets}/file.svg' NOTE: component name can be whatever you want
+2. Use the imported SVG component in the desired location within the JSX file as <ComponentName className="any-class-name" /> NOTE: className can be whatever you want
+3. Style the SVG component using the className provided in the previous step, use stroke-current and fill-current to change color of SVG. NOTE: unless you declare stroke color and fill color the icon will be invisible
+
+Example:
+
+```jsx
+import { ReactComponent as CalenderIcon } from "assets/icons/time/calender-1.svg";
+
+const ExampleComponent = () => {
+  return (
+    <div>
+      <CalenderIcon className="w-8 h-8 stroke-current current-fill text-primary-300" />
+    </div>
+  );
+};
+```
+
+IMPORTANT: stroke-current and fill-current will correspond to the color you set as text-color, so make sure you sue text utility class to change color of SVG
+
+-Width/Height can also be modified using the w-{number} and h-{number} utility classes, but default viewbox will be maintained if not specified

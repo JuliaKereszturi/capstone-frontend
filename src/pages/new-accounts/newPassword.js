@@ -1,0 +1,71 @@
+import Button from "../../components/button/buttons";
+import InputField from "../../components/input_fields/input_fields";
+import { ReactComponent as Logo } from "../../assets/images/logo/logo1.svg";
+import Carousel from "../../components/carousel/carousel";
+import "./signUp.css";
+const NewPassword = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Logic to handle the reset password submission
+  };
+
+  return (
+
+    <div className="flex  items-center justify-center  md:justify-between p-8 md:p-32 max-w-[1450px] mx-auto">
+      <div className="absolute md:static h-screen inset-0 m-auto md:m-none items-center p-5 md:pl-0  max-w-full w-[350px] md:w-[450px]  max-h-[500px] md:pr-24">
+        <div >
+          <Logo className=" w-48 md:w-32 md:mb-4 mx-auto block md:mx-0" />
+          <h1 className="text-center md:text-left font-roboto h4 md:h2 !tracking-normal">New Password</h1>
+          <div className=" w-full text-center md:text-left small-text font-roboto text-grayish mt-2 md:mt-5 mb-7 md:mb-10 ">
+            Set your new secure password.
+          </div>
+          <form onSubmit={handleSubmit}>
+
+            <InputField
+              label="New Password"
+              type="password"
+              placeholder="************"
+              className="bg-grayLighter"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+                // backgroundColor:"#F1F1F1"
+              }}
+            />
+            <InputField
+              label="Confirm Password"
+              type="password"
+              placeholder="************"
+              className="bg-grayLighter"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+                // backgroundColor:"#F1F1F1"
+              }}
+            />
+            <Button
+              style={{ width: "100%", maxWidth: "450px" }}
+              variant="primary"
+              onClick={() => { }}
+
+            >
+              Create Password
+            </Button>
+          </form>
+          <p className="text-center md:text-left small-text font-roboto mt-2 md:mt-4 !tracking-normal">
+            Already have a Zinio account? <a href="/signin" className="small-text-bold font-roboto text-primary-600">Sign in</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div className="hidden md:block md:w-1/2  justify-center">
+        <Carousel/>
+      </div>
+    </div>
+
+  );
+};
+
+export default NewPassword;
