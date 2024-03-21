@@ -1,9 +1,9 @@
 import React from "react";
-import ProfileTabs from "./ProfileTabs";
-import Sidebar from "./Sidebar";
-import ProfileForm from "./ProfileForm";
+import Sidebar from "../components/Sidebar";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-export default function Layout() {
+import { Outlet } from "react-router-dom";
+
+export default function DashboardLayout() {
   return (
     <>
       <div>
@@ -35,11 +35,7 @@ export default function Layout() {
           </div>
 
           <main className="pl-6 pr-6">
-            <ProfileTabs />
-
-            <h1 className="text-lg font-medium">Personal Details</h1>
-
-            <ProfileForm />
+            <Outlet />
           </main>
         </div>
       </div>

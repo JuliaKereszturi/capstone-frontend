@@ -1,14 +1,31 @@
+import DashboardLayout from "./layouts/DashboardLayout";
+import DefaultLayout from "./layouts/DefaultLayout";
+import ProfilePage from "./pages/ProfilePage";
 import ContractorSignUp from "./pages/new-accounts/contractorSignUp";
 import OrganizationSignUp from "./pages/new-accounts/organizationSignUp";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 // import { Amplify } from "aws-amplify";
 // import awsExports from "../aws-exports";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<DefaultLayout />}>
+      <Route index element={<ContractorSignUp />} />
+
+      <Route path="dashboard" element={<DashboardLayout />}>
+        <Route path="profile" element={<ProfilePage />} />
+      </Route>
+    </Route>
+  )
+);
+
 function App() {
-  return (
-    <div>
-      <ContractorSignUp />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
